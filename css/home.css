@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #163349;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Khi có display flex thì tất cả thằNg con có width sẽ bằng content của chính nó, và như thế chúng sẽ dồn cùng 1 hàng */
+
+.item {
+    background-color: #fff;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 180px;
+    transition: all 0.3s;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 1);
+    /* tren duoi - trai phai - blur - size - mau */
+}
+
+.item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.item .img {
+    transform: translateY(-40px);
+    z-index: 1000;
+}
+
+.item:hover{
+    height: 330px;
+    
+}
+
+.item:hover .content{
+    opacity: 1;
+    transform: translateY(-40px);
+}
+
+.content {
+   text-align: center;
+   opacity: 0;
+   transform: translateY(-80px);
+   transition: ease-out 0.2s;
+}
+
+.content h1 {
+    margin-bottom: 10px;
+}
+
